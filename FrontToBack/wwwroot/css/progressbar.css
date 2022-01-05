@@ -1,0 +1,142 @@
+#progressbar .container .row .left-progress .progress {
+    display: flex;
+    height: 3px !important;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+#progressbar .container .row .left-progress .progress .progress-bar {
+    height: 3px;
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .4s;
+    text-align: center;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    background-color: #f34f3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    
+    transition: width 0.6s ease 0s;
+}
+#progressbar .container .row .left-progress .title-progress-holder .title{
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    top: 40px;
+    vertical-align: middle;
+    font-family: Lora,serif;
+    color: #2b2b2b;
+}
+#progressbar .container .row .left-progress .title-progress-holder .value{  
+    margin-left: 90%;
+    margin-top: 300px;
+    color: #2b2b2b;
+    font-size: 18px;
+    opacity: 1;
+    z-index: 10;
+    font-family: Lora,serif;
+    width: auto;
+}
+#progressbar .container .row .right-progress .progress {
+    border-radius: 0.25rem;
+    display: flex;
+    background-color: #e9ecef;
+    height: 3px !important;
+    overflow: hidden;
+    font-size: .75rem;
+}
+
+#progressbar .container .row .right-progress .progress .progress-bar {
+    height: 3px;
+    color: rgb(255, 255, 255);
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #f34f3f;
+    transition: width 0.6s ease 0s;
+}
+#progressbar .container .row .right-progress .title-progress-holder .title{
+    top: 40px;
+    font-family: Lora,serif;
+    color: #2b2b2b;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 100;
+}
+#progressbar .container .row .right-progress .title-progress-holder .value{  
+    margin-left: 90%;
+    margin-top: 300px;
+    width: auto;
+    opacity: 1;
+    z-index: 10;
+    font-family: Lora,serif;
+    color: #2b2b2b;
+    font-size: 18px;
+}
+#progressbar .container .row .full-progress .progress {
+    display: flex;
+    height: 3px !important;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+#progressbar .container .row .full-progress .progress .progress-bar {
+    height: 3px;
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    white-space: nowrap;
+    background-color: #f34f3f;
+    transition: width 0.6s ease 0s;
+}
+@keyframes animateBar {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+#progressbar .container .row .full-progress .title-progress-holder .title{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 100;
+    top: 27px;
+    font-family: Lora,serif;
+    color: #2b2b2b;
+}
+#progressbar .container .row .full-progress .title-progress-holder .value{  
+    margin-left: 96%;
+    margin-top: 300px;
+    width: auto;
+    opacity: 1;
+    font-family: Lora,serif;
+    color: #2b2b2b;
+    font-size: 18px;
+    z-index: 10;
+}

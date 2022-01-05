@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+
+//  #navbar{
+//     .navbar{
+//         height: 120px;
+   .mega-menu:hover  {
+            .dropdown-menu{
+                display: block;
+                margin-top: 0;
+            }
+            }
+//         .logo-img{
+//            height: 5%;
+//            width: 200px;
+//            margin-left: 100px;
+//        }
+//        .navbar-collapse{
+//            margin-left: 80px;
+//        }
+//     }
+//  }
+ 
+.navbar{
+    margin-left: 150px;
+    .nav-item{
+        margin-left: 40px;
+    }
+}
+
+.navbar{
+    background-color: #fff !important;
+    padding: 0px 0px;
+    height: 120px;
+}
+.navbar-nav li:hover>ul.dropdown-menu{
+    display: block;
+    margin-left: 0px;
+}
+.navbar-nav{
+    a{
+        position: relative;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.5px;
+        padding: 5px;
+    }
+    a:after{
+        content: "";
+        position: absolute;
+        background-color: black;
+        height: 1px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    a:hover:after{
+        width: 100%;
+    }
+    .nav-item{
+        .dropdown-menu{
+            margin-top: 5px;
+            .submenu{
+                margin-left: 167px;
+            }
+            .blog-submenu{
+                margin-left: 157px;
+            }
+            .elements-submenu{
+                margin-left: 157px;
+            }
+        }
+    }
+}
+
+#carousel{
+    .carousel{
+        position: relative;
+        .carousel-inner{
+          .carousel-item{
+              > img{
+                  animation: zoomin 15s linear infinite;
+                  width: 400px;
+              }
+          }
+          .text{
+              position: absolute;
+              margin-top: 60px;
+              font-size:40px;
+              font-family: 'Playfair Display', serif;
+              margin-left: 20px;
+              p{
+                //   margin-left: 20px;
+                  width: 450px;
+                  color: gray;
+                  font-size: 18px;
+                  margin-top: 15px;
+              }
+          }
+        }
+      }
+}
+@keyframes zoomin {
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.07);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  .carousel-inner{
+    position: relative
+}
+#tabs{
+    .container{
+        .row{
+            .tab-content:hover{
+                transform: scale(1.06);
+                .tab-pane{
+                    h5{
+                        font-size: 15px;
+                        color: rgb(85, 80, 80);
+                        font-family:Verdana, Geneva, Tahoma, sans-serif;
+                        margin-left: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container{
+    width: 90%;
+    margin: 10px auto;
+}
+.container{
+    .portfolio-menu{
+        font-family: sans-serif;
+        font-size: small;
+        margin-top: 60px;
+    }
+}
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style: none;
+        }
+        li:hover{
+            color: rgb(175, 10, 10);
+        }
+    }
+.container{
+    .row{
+        .item{
+            .col{
+                .card{
+                    position: relative;
+                    border: 0;
+                    .card-body{
+                        h5{
+                            margin-left: 55px;
+                            font-size: 15px;
+                            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        }
+                        .card-text.dollar{
+                            margin-left: 80px;
+                        }
+                    }
+                    .status-sold{
+                        width: 60px;
+                        height: 30px;
+                        background: black;
+                        color: white;
+                        font-size: 20px;
+                        position: absolute;
+                        margin: 15px 15px;
+                        padding-left: 12px;
+                        padding-top: 1px;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        
+                    }
+                    .status-sale{
+                        width: 60px;
+                        height: 30px;
+                        background: white;
+                        color: black;
+                        font-size: 20px;
+                        position: absolute;
+                        margin: 15px 15px;
+                        padding-left: 12px;
+                        padding-top: 1px;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+.video-section{
+    background: #f7f7f7;
+    height: 600px;
+    margin-top: 100px;
+    .container{
+        .row{
+            .video{
+                margin-top: 130px;
+            }
+            .video:hover{
+                transform: scale(1.02);
+                overflow: hidden;
+            }
+            .video-text{
+                margin-top: 130px;
+                width: 480px;
+                margin-left: 30px;
+                font-family: 'Playfair Display', serif;
+                .text-section{
+                    .title{
+                        font-size: 40px;
+                        #red{
+                            color: red;
+                        }
+                    }
+                    .text{
+                        margin-top: 30px;
+                        color: gray;
+                        font-family: 'Playfair Display', serif;
+                        width: 400px;
+                        font-size: 17px;
+                    }
+                }
+                .text-with-icon{
+                    margin-top: 30px;
+                    span{
+                        color: gray;
+                        font-size: 17px;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+.team{
+    margin-top: 100px;
+    height: 600px;
+    .container{
+        #experts-title{
+            font-size: 35px;
+            font-family: 'Playfair Display', serif;
+            margin-left: 450px;
+        }
+        #experts-text1{
+            margin-left: 300px;
+            color: rgba(102, 101, 101, 0.856);
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+        }
+        #experts-text2{
+            margin-left: 400px;
+            color: rgba(102, 101, 101, 0.856);
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+        }
+        .row{
+            .experts-image{
+                margin-top: 60px;
+                padding-bottom: 100px;
+               #name{
+                    margin-left: 60px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: black;
+                }
+                #speciality{
+                    margin-left: 90px;
+                    color: gray;
+                }
+            }
+        }
+    }
+}
+#parallax{
+    background: url("https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-background-img.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 1400px;
+    height: 550px;
+    .parallax-inner{
+        .text{
+            padding-top: 200px;
+            padding-left: 500px;
+            span{
+                color: white;
+                font-family: 'Playfair Display', serif;
+                font-size: 30px;
+            }
+        }
+        .submit-email{
+            text-align: center;
+            .email{
+                display: inline;
+                #email{
+                    vertical-align: top;
+                    width: 360px;
+                    height: 60px;
+                    float: left;
+                    margin-left: 400px;
+                    padding: 15px;
+                    font-size: 14px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bolder;
+                }
+            }
+            .submit{
+                #submit{
+                    display: inline;
+                    float: left;
+                    height: 60px;
+                    border: 0;
+                    width: 160px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
+
+#blog-section{
+    background-color: #f8f8f8;
+    height: 750px;
+    .blog{
+        .container{
+            #blog-title{
+                font-family: 'Playfair Display', serif;
+                padding-top: 90px;
+                margin-left: 400px;
+            }
+           .blog-text{
+               margin-top: 30px;
+               color: gray;
+            #blog-text1{
+                font-family: 'Playfair Display', serif;
+                margin-left: 300px;
+                font-size: 17px;
+            }
+            #blog-text2{
+                font-family: 'Playfair Display', serif;
+                margin-left: 410px;
+                font-size: 17px;
+            }
+           }
+           .row{
+               margin-top: 80px;
+               .col-lg-4{
+                   position: relative;
+                   img{
+                       position: absolute;
+                   }
+                .date{
+                    position: absolute;
+                    z-index: 5555;
+                    width: 100px;
+                    font-size: 13px;
+                    padding: 5px;
+                    margin-left: 10px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bolder;
+                    background-color: white;
+                    margin-top: 10px;
+                    height: 30px;
+                    p{
+                        margin-left: 10px;
+                        z-index: 1;
+                    }
+                }
+                #title{
+                    position: absolute;
+                    z-index: 9999;
+                    margin-top: 250px;
+                    font-size: 20px;
+                    font-family: 'Playfair Display', serif;
+                    margin-left: 120px;
+                }
+                #statement{
+                    position: absolute;
+                    z-index: 9999;
+                    margin-top: 290px;
+                    width: 300px;
+                    margin-left: 50px;
+                    font-family: 'Playfair Display', serif;
+                    color: gray;
+                }
+               }
+           }
+        }
+    }
+}
+#florist-slider{
+    .florist-slider{
+        // padding-left: 400px;
+        height: 350px;
+        margin-top: 100px;
+        margin-left: 5  0px;
+        .container{
+            width: 800px;
+            // .row{
+                .carousel{
+                    .carousel-inner{
+                        .carousel-item{
+                            img{
+                                width: 100px !important;
+                                height: 100px;
+                                margin-left: 350px;
+                                margin-bottom: 200px;
+                            }
+                            .text{
+                                margin-left: 150px;
+                                p{
+                                    width: 500px;
+                                    font-size: 25px;
+                                    font-family: 'Playfair Display', serif;
+                                    color: rgb(80, 79, 79);
+                                }
+                            }
+                        }
+                    }
+                }
+            // }
+        }
+    }
+}
+#footer{      
+    background-color: rgb(254,250,243);
+    .footer{
+        .col{
+            margin-left: 50px;
+            h5{
+                font-size: 15px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+            }
+            ul{
+                margin-top: 25px;
+                li{
+                    font-size: 14px;
+                    color: rgb(161, 159, 159);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

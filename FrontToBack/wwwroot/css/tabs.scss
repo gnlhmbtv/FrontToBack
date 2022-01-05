@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+ #navbar{
+    .navbar{
+        height: 120px;
+        .dropdown:hover  {
+           .dropdown-menu{
+               display: block;
+               margin-top: 0;
+           }
+        }
+        .logo-img{
+           height: 5%;
+           width: 200px;
+           margin-left: 100px;
+       }
+       .navbar-collapse{
+           margin-left: 80px;
+       }
+    }
+ }
+ #title{
+    .title{
+        h1{
+           font-family: 'Playfair Display', serif;
+           font-size: 60px;
+           padding-top:80px ;
+           padding-left: 80px;
+        }
+    }
+}
+#tabs{
+    .tabs{
+        margin-top: 100px;
+        .container{
+            .row{
+               // .tab1{
+                    .nav{
+                        border: 1px solid rgb(219, 217, 217);
+                        .nav-item{
+                            width: 100px;
+                            .active{
+                                background-color: rgb(243,79,63);
+                                color: white;
+                                border: 1px solid black;
+                            }
+                        }
+                    }
+               // }
+            }
+        }
+    }
+}

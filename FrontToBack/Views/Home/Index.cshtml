@@ -1,0 +1,317 @@
+﻿@model HomeVm
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <!-- carousel start -->
+    <section id="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide col-lg-12 col-md-12 col-sm-12" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner col-md-12 col-sm-12">
+                @foreach (var item in Model.Sliders)
+                {
+                    <div class="carousel-item active">
+                        <img src="~/img/@item.ImageUrl" class="d-block w-100" alt="...">
+                    </div>
+                }
+
+                <div class="container">
+                    <div class="row">
+                        <div class="text col-lg-6 col-md-6 col-sm-6">
+                            <span id="black-slider-text-1">Send</span>
+                            <span id="red-slider-text" style="color: red;">flowers</span>
+                            <span id="black-slider-text-2">like</span><br>
+                            @Html.Raw(Model.SliderDesc.Title)
+                            <p class="col-lg-6 col-md-6 col-sm-6">
+                                @Model.SliderDesc.Desc
+                            </p>
+                            <img src="~/img/@Model.SliderDesc.ImageUrl" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- carousel end -->
+    <!-- main page tabmenu start -->
+    <section id="tabmenu ">
+        <div class="container">
+            <div class="portfolio-menu col-lg-6 col-md-6 col-sm-12">
+                <ul>
+                    <li class="active" data-filter="*">ALL</li>
+                    <li data-filter=".popular">POPULAR</li>
+                    <li data-filter=".winter">WINTER</li>
+                    <li data-filter=".various">VARIOUS</li>
+                    <li data-filter=".exotic">EXOTIC</li>
+                    <li data-filter=".greens">GREENS</li>
+                    <li data-filter=".cactuses">CACTUSES</li>
+                </ul>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 g-4 portfolio-item">
+                <div class="item popular winter">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="~/img/shop-7-img.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">MAJESTY PALM</h5>
+                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item winter popular">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="~/img/shop-8-img.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">FOXGLOVE FLOWER</h5>
+                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item various popular winter cactuses">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="~/img/shop-9-img.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">SWEET ALYSSUM</h5>
+                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
+                            </div>
+                            <div class="status-sold">Sold</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item exotic popular greens">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="~/img/shop-10-img.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title ">SPRING SNOWFLAKE</h5>
+                                <span class="card-text dollar">$</span><span class="card-text price">170</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item greens popular">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="~/img/shop-11-img.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">SCARLET SAGE</h5>
+                                <span class="card-text dollar" style="text-decoration: line-through;">$</span><span class="card-text price" style="text-decoration: line-through;">259</span>
+                                <span class="card-text">$</span><span class="card-text price">159</span>
+                            </div>
+                            <div class="status-sale">Sale</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item cactuses exotic">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="~/img/shop-12-img.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">ROCK SOAPWORT</h5>
+                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- tabmenu end -->
+    <!-- videolu section start -->
+    <section id="video">
+        <div class="video-section col-sm-12">
+            <div class="container">
+                <div class="row">
+                    <div class="video col-lg-6 col-md-12 col-sm-12">
+                        <img src="~/img/h3-video-img.jpg" width="550px" alt="">
+                    </div>
+                    <div class="video-text col-lg-6">
+                        <div class="text-section">
+                            <div class="title">
+                                <span>Surprise Your</span>
+                                <span id="red">Valentine!</span>
+                                <span">Let us arrange a smile.</span>
+                            </div>
+                            <div class="text">
+                                <span>Where flowers are our inspiration to create lasting memories. Whatever the occasion...</span>
+                            </div>
+                        </div>
+                        <div class="text-with-icon">
+                            <img src="~/img/h1-custom-icon.png" alt="">
+                            <span>Hand picked just for you.</span><br><br>
+                            <img src="~/img/h1-custom-icon.png" alt="">
+                            <span>Unique flower arrangements</span><br><br>
+                            <img src="~/img/h1-custom-icon.png" alt="">
+                            <span>Best way to say you care.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- videolu section end -->
+    <!-- team section start -->
+    <section id="team">
+        <div class="team">
+            <div class="container">
+                <span id="experts-title">Flower Experts</span>
+                <div class="col-lg-12 col-md-12 experts-text">
+                    <span id="experts-text1">A perfect blend of creativity, energy, communication, happiness</span><br>
+                    <span id="experts-text2"> and love. Let us arrange a smile for you.</span>
+                </div>
+                <div class="row">
+                    <div class="experts-image col-lg-3 img1">
+                        <img src="~/img/h3-team-img-1.png" alt="">
+                        <span id="name">CRYSTAL BROOKS</span><br>
+                        <span id="speciality">Florist</span>
+                    </div>
+                    <div class="experts-image col-lg-3 img2">
+                        <img src="~/img/h3-team-img-2.png" alt="">
+                        <span id="name">SHIRLEY HARRIS</span><br>
+                        <span id="speciality">Manager</span>
+                    </div>
+                    <div class="experts-image col-lg-3 img3">
+                        <img src="~/img/h3-team-img-3.png" alt="">
+                        <span id="name">BEVERLY CLARK</span><br>
+                        <span id="speciality">Florist</span>
+                    </div>
+                    <div class="experts-image col-lg-3 img4">
+                        <img src="~/img/h3-team-img-4.png" alt="">
+                        <span id="name">AMANDA WATKINS</span><br>
+                        <span id="speciality">Florist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- team section end -->
+    <!-- parallax section start -->
+    <section id="parallax">
+        <div class="parallax-inner">
+            <div class="text">
+                <span>Join The Colorful Bunch!</span><br><br>
+            </div>
+            <form action="">
+                <div class="submit-email">
+                    <div class="email">
+                        <input type="email" name="" id="email" required placeholder="Email Address">
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Subscribe" id="submit"
+                               style="background-color: rgb(243, 79, 63); color: white;">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- parallax section end -->
+    <!-- blog section start -->
+    <section id="blog-section">
+        <div class="blog">
+            <div class="container">
+                <h1 id="blog-title">From our Blog</h1>
+                <div class="col-lg-12 col-md-12 blog-text">
+                    <span id="blog-text1">A perfect blend of creativity, energy, communication, happiness</span><br>
+                    <span id="blog-text2"> and love. Let us arrange a smile for you.</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="~/img/blog-feature-img-1.jpg" width="360px" height="230px" alt="">
+                        <div class="date">
+                            <p id="date">27.04.2018</p>
+                        </div>
+                        <span id="title">Flower Power</span>
+                        <span id="statement">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</span>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="~/img/blog-feature-img-3.jpg" width="360px" height="230px" alt="">
+                        <div class="date">
+                            <p id="date">03.05.2018</p>
+                        </div>
+                        <span id="title">Local Florists</span>
+                        <span id="statement">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</span>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="~/img/blog-feature-img-4.jpg" width="360px" height="230px" alt="">
+                        <div class="date">
+                            <p id="date">03.05.2018</p>
+                        </div>
+                        <span id="title">Flower Beauty</span>
+                        <span id="statement">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- blog section end -->
+    <section id="slider2">
+        <div class="container">
+            <div class="row py-5 justify-content-center">
+                <div class="col-md-8 col-xl-6">
+                    <div class="owl-carousel slider2">
+                        <div>
+                            <div class="item text-center">
+                                <div class="img d-flex justify-content-center">
+                                    <img src="~/img/testimonial-img-1.png" alt="">
+                                </div>
+                                <div class="text text-muted pt-3 pb-5">
+                                    <i>
+                                        Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus
+                                        lingua.
+                                    </i>
+                                </div>
+                                <div class="author">
+                                    <h6>Anna Barnes</h6>
+                                    <p class="text-black-50">Florist</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="item text-center">
+                                <div class="img d-flex justify-content-center">
+                                    <img src="~/img/testimonial-img-2.png" alt="">
+                                </div>
+                                <div class="text text-muted pt-3 pb-5">
+                                    <i>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                        ligula eget.
+                                    </i>
+                                </div>
+                                <div class="author">
+                                    <h6>Jasmine White</h6>
+                                    <p class="text-black-50">Florist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- florist-slider end -->
+</main>
+

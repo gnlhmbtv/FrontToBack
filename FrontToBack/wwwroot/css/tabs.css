@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+#title .title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  padding-top: 80px;
+  padding-left: 80px;
+}
+
+#tabs .tabs {
+  margin-top: 100px;
+}
+
+#tabs .tabs .container .row .nav {
+  border: 1px solid #dbd9d9;
+}
+
+#tabs .tabs .container .row .nav .nav-item {
+  width: 100px;
+}
+
+#tabs .tabs .container .row .nav .nav-item .active {
+  background-color: #f34f3f;
+  color: white;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=tabs.css.map */
