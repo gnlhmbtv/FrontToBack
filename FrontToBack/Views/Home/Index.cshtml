@@ -58,84 +58,28 @@
                 <ul>
                     <li class="active" data-filter="*">ALL</li>
                     <li data-filter=".popular">POPULAR</li>
-                    <li data-filter=".winter">WINTER</li>
-                    <li data-filter=".various">VARIOUS</li>
-                    <li data-filter=".exotic">EXOTIC</li>
-                    <li data-filter=".greens">GREENS</li>
-                    <li data-filter=".cactuses">CACTUSES</li>
+                    @foreach (var item in Model.Categories)
+	                    {
+		                    <li data-filter=".@item.Name.ToLower()">@item.Name</li>
+	                    }
+                    
                 </ul>
             </div>
             <div class="row row-cols-1 row-cols-md-4 g-4 portfolio-item">
-                <div class="item popular winter">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="~/img/shop-7-img.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">MAJESTY PALM</h5>
-                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
+                @foreach (var item in Model.Products)
+                {
+                    <div class="item @item.Category">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="~/img/@item.ImageUrl" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">@item.Name</h5>
+                                    <span class="card-text dollar">$</span><span class="card-text price">@item.Price</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="item winter popular">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="~/img/shop-8-img.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">FOXGLOVE FLOWER</h5>
-                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item various popular winter cactuses">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="~/img/shop-9-img.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">SWEET ALYSSUM</h5>
-                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
-                            </div>
-                            <div class="status-sold">Sold</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item exotic popular greens">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="~/img/shop-10-img.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title ">SPRING SNOWFLAKE</h5>
-                                <span class="card-text dollar">$</span><span class="card-text price">170</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item greens popular">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="~/img/shop-11-img.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">SCARLET SAGE</h5>
-                                <span class="card-text dollar" style="text-decoration: line-through;">$</span><span class="card-text price" style="text-decoration: line-through;">259</span>
-                                <span class="card-text">$</span><span class="card-text price">159</span>
-                            </div>
-                            <div class="status-sale">Sale</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item cactuses exotic">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="~/img/shop-12-img.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">ROCK SOAPWORT</h5>
-                                <span class="card-text dollar">$</span><span class="card-text price">259</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </section> -->
@@ -146,17 +90,19 @@
             <div class="container">
                 <div class="row">
                     <div class="video col-lg-6 col-md-12 col-sm-12">
-                        <img src="~/img/h3-video-img.jpg" width="550px" alt="">
+                        <a href="@Model.About.VideoUrl">
+                            <img src="~/img/@Model.About.ImageUrl" width="550px" alt="">
+                        </a>
                     </div>
                     <div class="video-text col-lg-6">
                         <div class="text-section">
                             <div class="title">
-                                <span>Surprise Your</span>
+                                <span>@Model.About.Title</span>
                                 <span id="red">Valentine!</span>
                                 <span">Let us arrange a smile.</span>
                             </div>
                             <div class="text">
-                                <span>Where flowers are our inspiration to create lasting memories. Whatever the occasion...</span>
+                                <span>@Model.About.Description</span>
                             </div>
                         </div>
                         <div class="text-with-icon">
@@ -183,26 +129,14 @@
                     <span id="experts-text2"> and love. Let us arrange a smile for you.</span>
                 </div>
                 <div class="row">
+                    @foreach (var item in Model.Experts)
+	                    {
                     <div class="experts-image col-lg-3 img1">
-                        <img src="~/img/h3-team-img-1.png" alt="">
-                        <span id="name">CRYSTAL BROOKS</span><br>
-                        <span id="speciality">Florist</span>
+                        <img src="~/img/@item.ImageUrl" alt="">
+                        <span id="name">@item.FloristName</span><br>
+                        <span id="speciality">@item.Speciality</span>
                     </div>
-                    <div class="experts-image col-lg-3 img2">
-                        <img src="~/img/h3-team-img-2.png" alt="">
-                        <span id="name">SHIRLEY HARRIS</span><br>
-                        <span id="speciality">Manager</span>
-                    </div>
-                    <div class="experts-image col-lg-3 img3">
-                        <img src="~/img/h3-team-img-3.png" alt="">
-                        <span id="name">BEVERLY CLARK</span><br>
-                        <span id="speciality">Florist</span>
-                    </div>
-                    <div class="experts-image col-lg-3 img4">
-                        <img src="~/img/h3-team-img-4.png" alt="">
-                        <span id="name">AMANDA WATKINS</span><br>
-                        <span id="speciality">Florist</span>
-                    </div>
+	                    }
                 </div>
             </div>
         </div>
@@ -210,7 +144,8 @@
     <!-- team section end -->
     <!-- parallax section start -->
     <section id="parallax">
-        <div class="parallax-inner">
+        <div class="parallax-inner" style="    background: url(" https: //fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-background-img.jpg");
+             ">
             <div class="text">
                 <span>Join The Colorful Bunch!</span><br><br>
             </div>

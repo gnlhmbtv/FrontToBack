@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace FrontToBack.Models
 {
-    public class Slider
+    public class Product
     {
         public int Id { get; set; }
-        [Required]
+        [Required, MinLength(5)]
+        public string Name { get; set; }
         public string ImageUrl { get; set; }
+        public double Price { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

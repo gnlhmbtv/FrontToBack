@@ -10,5 +10,9 @@ namespace FrontToBack.ViewModels
     {
         public List<Slider> Sliders { get; set; }
         public SliderDesc SliderDesc { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
+        public IEnumerable<Product> Products { get; set; }
+        public About About { get; set; }
+        public IEnumerable<Expert> Experts { get; set; }
     }
 }
